@@ -3,7 +3,7 @@ package kg.megacome.course;
 
 import kg.megacome.course.models.*;
 import kg.megacome.course.comparators.*;
-import kg.megacome.course.enumPackage.TypeOfCar;
+import kg.megacome.course.enums.TypeOfCar;
 
 import java.text.SimpleDateFormat;
 import java.time.*;
@@ -297,37 +297,37 @@ ZonedDateTime currentTimeOfExplode=  ZonedDateTime.now();
 
         System.out.println("___________________________________");
 
-        ArrayList<Car> cars= new ArrayList<>();
-        cars.addAll(acuraCars);
-        cars.addAll(hyndaiCars);
-        cars.addAll(toyotaCars);
-        cars.addAll(bmwCars);
-        cars.addAll(maseratisCar);
+        ArrayList<Car> carsList= new ArrayList<>();
+        carsList.addAll(acuraCars);
+        carsList.addAll(hyndaiCars);
+        carsList.addAll(toyotaCars);
+        carsList.addAll(bmwCars);
+        carsList.addAll(maseratisCar);
 
-        System.out.println("Printing the  carList");
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P):%s  IsHybrid:%B   Color:%S   Type:%S%n ",  rdx.getModel(), rdx.getYear(), rdx.getCarCost(), rdx.getCountry(),rdx.getWarranty(), rdx.isHybrid(), rdx.getColor(),rdx.getTypeOfAcura()) ;
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P):%s  IsHybrid:%B   Color:%S   Type:%S%n ",  rsx.getModel(), rsx.getYear(), rsx.getCarCost(), rsx.getCountry(),rsx.getWarranty(), rsx.isHybrid(), rsx.getColor(),rsx.getTypeOfAcura()) ;
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ",  mdx.getModel(), mdx.getYear(), mdx.getCarCost(), mdx.getCountry(),mdx.getWarranty(), mdx.isHybrid(), mdx.getColor(),mdx.getTypeOfAcura()) ;
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ",  nsx.getModel(), nsx.getYear(), nsx.getCarCost(), nsx.getCountry(),nsx.getWarranty(), nsx.isHybrid(), nsx.getColor(),nsx.getTypeOfAcura()) ;
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ",  tlx.getModel(), tlx.getYear(), tlx.getCarCost(), tlx.getCountry(),tlx.getWarranty(), tlx.isHybrid(), tlx.getColor(),tlx.getTypeOfAcura()) ;
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ", corolla.getModel(),corolla.getYear(), corolla.getCarCost(),corolla.getCountry(),corolla.getWarranty(),corolla.isHybrid(),corolla.getColor(),corolla.getEnumTypeToyota());
+        //System.out.println("Printing the  carList");
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P):%s  IsHybrid:%B   Color:%S   Type:%S%n ",  rdx.getModel(), rdx.getYear(), rdx.getCarCost(), rdx.getCountry(),rdx.getWarranty(), rdx.isHybrid(), rdx.getColor(),rdx.getTypeOfAcura()) ;
+        //System.out.printf("Model:%s Year:(%s)  Cost:%d   Country:%s  Warranty(P):%s  IsHybrid:%B   Color:%S   Type:%S%n ",  rsx.getModel(), rsx.getYear(), rsx.getCarCost(), rsx.getCountry(),rsx.getWarranty(), rsx.isHybrid(), rsx.getColor(),rsx.getTypeOfAcura()) ;
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ",  mdx.getModel(), mdx.getYear(), mdx.getCarCost(), mdx.getCountry(),mdx.getWarranty(), mdx.isHybrid(), mdx.getColor(),mdx.getTypeOfAcura()) ;
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d  Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ",  nsx.getModel(), nsx.getYear(), nsx.getCarCost(), nsx.getCountry(),nsx.getWarranty(), nsx.isHybrid(), nsx.getColor(),nsx.getTypeOfAcura()) ;
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S   Type:%S%n ",  tlx.getModel(), tlx.getYear(), tlx.getCarCost(), tlx.getCountry(),tlx.getWarranty(), tlx.isHybrid(), tlx.getColor(),tlx.getTypeOfAcura()) ;
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s  IsHybrid%B    Color:%S   Type:%S%n ", corolla.getModel(),corolla.getYear(), corolla.getCarCost(),corolla.getCountry(),corolla.getWarranty(),corolla.isHybrid(),corolla.getColor(),corolla.getEnumTypeToyota());
 
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", creta.getModel(),creta.getYear(), creta.getCarCost(),creta.getCountry(),creta.getWarranty(),creta.isHybrid(),creta.getColor(),creta.getTypeHyundaiEnum());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", i30n.getModel(),i30n.getYear(), i30n.getCarCost(),i30n.getCountry(),i30n.getWarranty(),i30n.isHybrid(),i30n.getColor(),i30n.getTypeHyundaiEnum());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", genesisCoupe.getModel(),genesisCoupe.getYear(), genesisCoupe.getCarCost(),genesisCoupe.getCountry(),genesisCoupe.getWarranty(),genesisCoupe.isHybrid(),genesisCoupe.getColor(),genesisCoupe.getTypeHyundaiEnum());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", hr300.getModel(),hr300.getYear(), hr300.getCarCost(),hr300.getCountry(),hr300.getWarranty(),hr300.isHybrid(),hr300.getColor(),hr300.getTypeHyundaiEnum());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", creta.getModel(),creta.getYear(), creta.getCarCost(),creta.getCountry(),creta.getWarranty(),creta.isHybrid(),creta.getColor(),creta.getTypeHyundaiEnum());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", i30n.getModel(),i30n.getYear(), i30n.getCarCost(),i30n.getCountry(),i30n.getWarranty(),i30n.isHybrid(),i30n.getColor(),i30n.getTypeHyundaiEnum());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", genesisCoupe.getModel(),genesisCoupe.getYear(), genesisCoupe.getCarCost(),genesisCoupe.getCountry(),genesisCoupe.getWarranty(),genesisCoupe.isHybrid(),genesisCoupe.getColor(),genesisCoupe.getTypeHyundaiEnum());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", hr300.getModel(),hr300.getYear(), hr300.getCarCost(),hr300.getCountry(),hr300.getWarranty(),hr300.isHybrid(),hr300.getColor(),hr300.getTypeHyundaiEnum());
 
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", bmw3.getModel(),bmw3.getYear(), bmw3.getCarCost(),bmw3.getCountry(),bmw3.getWarranty(),bmw3.isHybrid(),bmw3.getColor(),bmw3.getTypeOfBmw());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", bmw7.getModel(),bmw7.getYear(), bmw7.getCarCost(),bmw7.getCountry(),bmw7.getWarranty(),bmw7.isHybrid(),bmw7.getColor(),bmw7.getTypeOfBmw());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", bmw3Gt.getModel(),bmw3Gt.getYear(), bmw3Gt.getCarCost(),bmw3Gt.getCountry(),bmw3Gt.getWarranty(),bmw3Gt.isHybrid(),bmw3Gt.getColor(),bmw3Gt.getTypeOfBmw());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", x2.getModel(),x2.getYear(), x2.getCarCost(),x2.getCountry(),x2.getWarranty(),x2.isHybrid(),x2.getColor(),x2.getTypeOfBmw());
-        System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", x10.getModel(),x10.getYear(), x10.getCarCost(),x10.getCountry(),x10.getWarranty(),x10.isHybrid(),x10.getColor(),x10.getTypeOfBmw());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", bmw3.getModel(),bmw3.getYear(), bmw3.getCarCost(),bmw3.getCountry(),bmw3.getWarranty(),bmw3.isHybrid(),bmw3.getColor(),bmw3.getTypeOfBmw());
+        //System.out.printf("Model:%s Year:(%s)  Cost:%d   Country:%s Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", bmw7.getModel(),bmw7.getYear(), bmw7.getCarCost(),bmw7.getCountry(),bmw7.getWarranty(),bmw7.isHybrid(),bmw7.getColor(),bmw7.getTypeOfBmw());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", bmw3Gt.getModel(),bmw3Gt.getYear(), bmw3Gt.getCarCost(),bmw3Gt.getCountry(),bmw3Gt.getWarranty(),bmw3Gt.isHybrid(),bmw3Gt.getColor(),bmw3Gt.getTypeOfBmw());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B    Color:%S    Type:%S%n ", x2.getModel(),x2.getYear(), x2.getCarCost(),x2.getCountry(),x2.getWarranty(),x2.isHybrid(),x2.getColor(),x2.getTypeOfBmw());
+        //System.out.printf("Model:%s  Year:(%s)  Cost:%d   Country:%s  Warranty(P)%s   IsHybrid%B   Color:%S    Type:%S%n ", x10.getModel(),x10.getYear(), x10.getCarCost(),x10.getCountry(),x10.getWarranty(),x10.isHybrid(),x10.getColor(),x10.getTypeOfBmw());
 
-        System.out.printf("Type:%S   Was manufactured%S   Warranty(P)%s   Time:%tT   in sale Branch%S   bought in:%s   Location:%s%n  "  , lavante.getTypeOfMaserati(),lavante.getDayOfManufactured(),lavante.getWarranty1(),lavante.getTimeWhenItCrafted(),lavante.getTimeWasInBranch(),lavante.getWhereItIs(),lavante.getLocation());
-        System.out.printf("Type:%S   Was manufactured%S   Warranty(P)%s   Time: %tT  in sale Branch%S   bought in:%s   Location:%s%n "  , qattroporte.getTypeOfMaserati(),qattroporte.getDayOfManufactured(),qattroporte.getWarranty1(),qattroporte.getTimeWhenItCrafted(),qattroporte.getTimeWasInBranch(),qattroporte.getWhereItIs(),qattroporte.getLocation());
+        //System.out.printf("Type:%S   Was manufactured%S   Warranty(P)%s   Time:%tT   in sale Branch%S    bought in:%s  Location:%s%n  "  , lavante.getTypeOfMaserati(),lavante.getDayOfManufactured(),lavante.getWarranty1(),lavante.getTimeWhenItCrafted(),lavante.getTimeWasInBranch(),lavante.getWhereItIs(),lavante.getLocation());
+        //System.out.printf("Type:%S   Was manufactured%S   Warranty(P)%s   Time: %tT   in sale Branch%S   bought in:%s  Location:%s%n "  , qattroporte.getTypeOfMaserati(),qattroporte.getDayOfManufactured(),qattroporte.getWarranty1(),qattroporte.getTimeWhenItCrafted(),qattroporte.getTimeWasInBranch(),qattroporte.getWhereItIs(),qattroporte.getLocation());
 
 
-        System.out.println("Size of : "+cars.size());
+        System.out.println("Size of : "+carsList.size());
         System.out.println();
         System.out.println("LocalDate: get the day of the month");
         int date= LocalDate.now().getDayOfMonth();
@@ -354,8 +354,12 @@ ZonedDateTime currentTimeOfExplode=  ZonedDateTime.now();
         System.out.println("(String)Month When it arrived: "+ month1);
         System.out.println("(String) , Month when it arrived:  "+ day);
 
-
-
+        System.out.println("Print info  about bmw  ");
+        System.out.println(bmwCars.get(3));
+        System.out.println("print date of start of warranty  "+ startDayofBmwX2);
+        System.out.println("print date of end of warranty " + endDateBmwX2);
+        System.out.println("print zone id "+ zoneGer);
+        System.out.println("year of manufacturing with  full  parametres "+ zoneDateTimeBmwX2 );
         }
         }
 

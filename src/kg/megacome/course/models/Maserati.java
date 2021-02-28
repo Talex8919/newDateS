@@ -1,6 +1,6 @@
 package kg.megacome.course.models;
 
-import kg.megacome.course.enumPackage.TypeOfCar;
+import kg.megacome.course.enums.TypeOfCar;
 
 import java.time.*;
 
